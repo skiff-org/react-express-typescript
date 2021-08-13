@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
+    "@types/react": "^17.0.17",
     "run-p": "^0.0.0"
   }
 }
