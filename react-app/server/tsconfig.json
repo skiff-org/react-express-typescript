@@ -1,0 +1,27 @@
+{
+  "extends": "../tsconfig.json",
+
+  "include": ["."],
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": ["dom", "esnext"],
+    "outDir": "./dist",
+    "target": "es6",
+    "importHelpers": true,
+    "declaration": true,
+    "declarationDir": "dist",
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "resolveJsonModule": true
+  },
+
+  "exclude": [
+    "./node_modules",
+    "./dist"
+  ]
+}
+  
