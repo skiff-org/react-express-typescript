@@ -18,11 +18,12 @@
   },
   "type": "module",
   "scripts": {
-    "start:server": "cd server && ts-node-dev ./server.ts --respawn --transpileOnly && wait-on tcp:5000",
+    "start:server": "cd server && source sendgrid.env && ts-node-dev ./server.ts --respawn --transpileOnly && wait-on tcp:5000",
     "start:app": "react-scripts start",
     "start": "run-p --race start:server start:app",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-server": "cd ./server && source sendgrid.env && PORT=5001 jest ./*.test.ts",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,8 +45,13 @@
     ]
   },
   "devDependencies": {
+    "@sendgrid/mail": "7.4.6",
     "@types/express": "^4.17.13",
     "@types/react": "^17.0.17",
-    "run-p": "^0.0.0"
+    "cors": "2.8.5",
+    "jest": "26.6.0",
+    "run-p": "^0.0.0",
+    "string-sanitizer": "2.0.2",
+    "ts-jest": "26.5.6"
   }
 }
